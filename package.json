@@ -1,0 +1,27 @@
+{
+  "name": "queue-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "caps.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennerdulce/queue-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jennerdulce/queue-server/issues"
+  },
+  "homepage": "https://github.com/jennerdulce/queue-server#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "faker": "^5.5.2",
+    "jest": "^26.6.3",
+    "socket.io": "^2.4.1",
+    "socket.io-client": "^2.4.0"
+  }
+}
