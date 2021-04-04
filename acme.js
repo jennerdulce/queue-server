@@ -7,13 +7,13 @@ const faker = require('faker');
 
 caps.on('connect', (socket) => {
   // subscribes to 'delievered'
-  caps.emit('join', 'flower delievery')
-  console.log(`joined 'flower delievery'`)
+  caps.emit('join', 'acme delievery')
+  console.log(`joined 'acme delievered'`)
 })
 
 setInterval(() => {
   let fakeOrder = {
-    storeName: '1-200-Flowers',
+    storeName: 'ACME Inc.',
     orderId: faker.address.zipCode(),
     customerName: faker.name.findName(),
     address: faker.address.streetAddress()
@@ -23,7 +23,7 @@ setInterval(() => {
 }, 5000)
 
 // catch up
-caps.emit('catchupQueue', 'flowers')
+caps.emit('catchup', 'acme')
 caps.on('delievered', hasBeenDelievered)
 
 

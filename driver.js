@@ -12,7 +12,8 @@ caps.on('connect', (socket) => {
 })
 
 // catch up
-caps.emit('pickupQueue')
+caps.emit('pickupQueue', 'flowers')
+caps.emit('pickupQueue', 'acme')
 
 caps.on('newPickup', pickUpItem)
 caps.on('relayMessage', notified)
@@ -25,13 +26,11 @@ function pickUpItem(payload) {
 }
 
 function notified(payload) {
-  console.log('EMIT D=======================================')
   caps.emit('delievered', payload)
 }
 
-
 module.exports = {
-  pickUpItem: pickUpItem,
+  pickUpItem: pickUpItem
 }
 
 console.log('DRIVER TURNED ON...')
